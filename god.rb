@@ -1,5 +1,6 @@
-require 'sinatra'
+require 'bundler/setup'
 require 'prime'
+Bundler.require
 
 get '/' do
     margin = rand(1..100) * 6
