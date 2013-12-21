@@ -2,12 +2,14 @@
 <html>
 <head>
     <title>Prime Patterns</title>
-    <style>
+    <style type="text/css">
         body {
-            background-color: #222222; padding: 0 <%= rand(1..100) * 6 %>;
+            background-color: #222222; 
+            padding: 0 <%= rand(1..100) * 6%>px;
             }
         div {
-            margin: 0; padding: 0px;
+            margin:0; 
+            padding:0px;
             }
     </style>
 </head>
@@ -15,7 +17,7 @@
 
     <%11000.times.each_with_index.map do |x, i|%>
         <%if Prime.prime?(i)%>
-            <div 
+            <div
                 style='background-color: cyan; float: left; display: block; border: 1px solid green; height: 5px; width: 5px;'>
             </div>
         <%else%>
