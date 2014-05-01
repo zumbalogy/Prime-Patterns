@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>
-        Prime Patterns
+        Primes
     </title>
     <style type="text/css">
         body {
@@ -29,13 +29,23 @@
             display: block;
             height: 3px;
             width: 3px;
-            background-color: #222222;
         }
         .prime {
-            background-color: cyan;
+            /*background-color: #3388AA;*/
+            background-color: #007050;
         }
-        .white {
+        .white {/*
+            background-color: #AAAAFF;
             background-color: white;
+            background-color: #F25C29;*/
+            background-color: #29F25C;
+        }
+        .blue {
+           /* background-color: #AAFFFF;
+            background-color: white;
+            background-color: #F25C29;
+            background-color: #6F4FFF;*/
+            background-color: #AAF2FF;
         }
     </style>
 </head>
@@ -74,15 +84,17 @@
 
     var p_count = 0;
     var body = document.getElementById('body');
-    for (var i = 0; i < 90000; i++){
+    for (var i = 0; i < 100000; i++){
         if (isPrime(i)){
-            p_count++
             var foo = document.createElement("div")
             if (isPrime(p_count)) {
                 foo.className = 'white'
+            } else if (isPrime(p_count + i)) {
+                foo.className = 'blue'
             } else {
                 foo.className = 'prime'
             }
+            p_count++
             body.appendChild(foo);
         } else {
             var foo = document.createElement("div")
